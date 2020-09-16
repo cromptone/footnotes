@@ -1,0 +1,3 @@
+name: footnotes
+dependencies:
+- python=3.8
