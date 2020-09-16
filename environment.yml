@@ -4,6 +4,4 @@ dependencies:
 - pip=20.2.2
 - pip:
   - wordfreq==2.3.2
-  - jupyter==4.6.3
-  - jupyter-notebook==6.0.3
   - spacy==2.3.2 
