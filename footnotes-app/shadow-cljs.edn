@@ -2,8 +2,7 @@
 {:source-paths
  ["src"]
 
- :dependencies
- []
+ :dependencies [[reagent "1.0.0-alpha2"]]
 
  :builds
  {:app {:target :browser
