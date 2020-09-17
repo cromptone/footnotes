@@ -4,11 +4,11 @@ dict.txt
 notebooks/.ipynb_checkpoints/corpus_freq-checkpoint.ipynb
 __pycache__/footnotes.cpython-38.pyc
 node_modules/
-public/js
+footnotes-app/public/js
 
-/target
-/checkouts
-/src/gen
+footnotes_app/target
+footnotes_app/checkouts
+footnotes_app/src/gen
 
 pom.xml
 pom.xml.asc
