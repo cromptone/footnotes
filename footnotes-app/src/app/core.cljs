@@ -8,13 +8,26 @@
 (def text (ratom/atom ""))
 (def url "http://localhost:5000/parse/hard_coded_query_string")
 
+(defn text-input []
+  (let [val (ratom/atom "")]
+    (fn []
+      [:div
+       [:textarea {:type "text"
+                   :placeholder "Add text here"
+                   :value @val
+                   :on-change #(reset! val (-> % .-target .-value))}]
+       [:button {:on-click (.log js/console @val)}
+        "Get footnotes"]])))
+
 (defn get-text! []
   (go (let [response (<! (http/get url {:with-credentials? false}))]
         (reset! text (:body response)))))
 
 (defn view []
   (get-text!)
-  [:p @text])
+  [:<>
+   [:p @text]
+   [text-input]])
 
 (defn start []
   (r/render [view]
